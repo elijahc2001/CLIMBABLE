@@ -3,4 +3,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return('<h1>hello world</h1>')
+    return('<h1>Climbable is active</h1>')
