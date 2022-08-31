@@ -6,4 +6,4 @@ CLIMBDATABASE = 'CLIMBABLE_DATABASE'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+     return render_template('index.html', disclaimer='manage risks responsibly')
