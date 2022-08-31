@@ -8,7 +8,7 @@
     <title>CLIMABLE</title>
     <meta name="description" content="Find your stoke" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
 
   <header>
@@ -41,6 +41,12 @@
     <p>RANGE</p>
   </div>
 
+  <div id="climbs">
+    <h1>CLIMBS</h1>
+    <ol>
+
+    </ol>
+  </div>
 
   <div id="footer">
     {{ disclaimer|upper }}
