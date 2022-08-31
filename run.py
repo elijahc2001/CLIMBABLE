@@ -6,5 +6,4 @@ CLIMBDATABASE = 'CLIMBABLE_DATABASE'
 
 @app.route('/')
 def index():
-      db = sqlite3.connect(CLIMBABLE_DATABASE)
-    print(db)
+      return render_template ("index.html")
