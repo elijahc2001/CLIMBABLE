@@ -46,6 +46,26 @@
   </div>
 
 
+    {% extends "base.html" %}
+
+    {% block title %}Climbs{% endblock %}
+
+    {% block content %}
+
+    <div id="all-climbs">
+
+    {% for send in climbs %}
+    <div class="single-climbs">
+    <a href="/send/{{ send[0] }}" title="{{ send[0][2] }}">  </a>
+    </div>
+    {% endfor %}
+    </div>
+    {% endblock %}
+    <div id="footer">
+      {{ disclaimer|upper }}
+    </div>
+
+
   </body>
 
 </html>

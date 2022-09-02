@@ -4,13 +4,18 @@ app = Flask(__name__)
 
 CLIMBDATABASE = 'CLIMBABLE_DATABASE.db'
 
+
 @app.route('/')
 def index():
-      return render_template ("index.html")
+    db = sqlite3.connect(CLIMBDATABASE)
+    tables = get_all(db)
+    db.close()
+    return render_template('index.html',
+    title=tables['climbs'])
 
 def get_all(db):
-    pokemon = []
-    cur = db.execute('SELECT * FROM pokemon_cleaned')
+    title = []
+    cur = db.execute('SELECT * FROM climbs')
     for row in cur:
-        pokemon.append(list(row))
-    return {'pokemon':pokemon}
+        title.append(list(row))
+    return {'Title':Title}
