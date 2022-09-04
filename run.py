@@ -18,4 +18,4 @@ def get_all(db):
     cur = db.execute('SELECT * FROM climbs')
     for row in cur:
         title.append(list(row))
-    return {'Title':Title}
+    return {'title':climbs}
